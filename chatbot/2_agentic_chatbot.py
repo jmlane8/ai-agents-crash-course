@@ -5,12 +5,13 @@ from openai.types.responses import ResponseTextDeltaEvent
 dotenv.load_dotenv()
 
 from agents import Runner, SQLiteSession
-from nutrition_agent import nutrition_agent
+from nutrition_agent import exa_search_mcp, nutrition_agent
 
 @cl.on_chat_start
 async def on_chat_start():
     session = SQLiteSession("conversation_history")
     cl.user_session.set("agent_session", session)
+    await exa_search_mcp.connect()
 
 @cl.on_message
 async def on_message(message: cl.Message):
