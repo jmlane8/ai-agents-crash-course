@@ -140,7 +140,7 @@ opentelemetry-util-http==0.58b0
 orjson==3.11.3
 overrides==7.7.0
 packaging==25.0
-pandas==2.3.2
+pandas>=2.3.3
 parso==0.8.5
 pathspec==0.12.1
 pexpect==4.9.0
@@ -156,9 +156,9 @@ pyasn1==0.6.1
 pyasn1_modules==0.4.2
 pybase64==1.4.2
 pycodestyle==2.14.0
-pydantic==2.11.9
+pydantic>=2.12
 pydantic-settings==2.10.1
-pydantic_core==2.33.2
+pydantic_core
 pyflakes==3.4.0
 Pygments==2.19.2
 PyJWT==2.10.1
